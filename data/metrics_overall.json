@@ -1,0 +1,15 @@
+{
+  "model": "HistGradientBoostingRegressor(loss='poisson')",
+  "train_rows": 17192,
+  "test_rows": 4298,
+  "train_months": 28,
+  "test_months": 7,
+  "actual_total": 120378.0,
+  "pred_total": 68534.54049053014,
+  "mae": 18.874525677302262,
+  "rmse": 38.814750796771875,
+  "smape": 1.277500097497197,
+  "wape": 0.673899810273016,
+  "bias_ratio": -0.43067221177848,
+  "r2": 0.39432100942732573
+}
