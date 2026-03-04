@@ -12,14 +12,47 @@ completes the product-month grid, performs an 80/20 chronological split, and cre
 
 ## Install
 ```bash
-python -m venv .venv
+python3.14 -m venv .venv
 source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+On Windows (PowerShell):
+```powershell
+py -3.14 -m venv .venv
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
 ## Run
 ```bash
 bash run_preprocess.sh
+```
+
+## Flask API (MVP)
+Run:
+```bash
+python app.py
+```
+
+Base URL: `http://localhost:8080`
+
+Endpoints:
+- `GET /health`
+- `GET /pipeline`
+- `POST /preprocess`
+- `POST /train-evaluate`
+- `POST /report-last`
+- `POST /run-all`
+
+Example (PowerShell):
+```powershell
+Invoke-RestMethod -Method Post -Uri "http://localhost:8080/run-all" -ContentType "application/json" -Body (@{
+  sales2017 = "./data/sales 2017.xlsx"
+  sales2018 = "./data/sales 2018.xlsx"
+  sales2019 = "./data/sales 2019.xlsx"
+  outdir = "./data"
+} | ConvertTo-Json)
 ```
 
 ## Outputs (written to `--outdir`, default `/mnt/data`)

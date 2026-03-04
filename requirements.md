@@ -164,7 +164,7 @@ THE SYSTEM SHALL forecast retail sales demand using historical economic indicato
 
 ### Technical Constraints
 
-**TC-1:** THE SYSTEM SHALL run in Python 3.8+ environment with standard data science libraries (pandas, numpy, matplotlib, seaborn).
+**TC-1:** THE SYSTEM SHALL run in Python 3.14 environment with standard data science libraries (pandas, numpy, matplotlib, seaborn).
 
 **TC-2:** THE SYSTEM SHALL operate within a Jupyter Notebook environment for interactive exploration.
 

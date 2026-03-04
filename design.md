@@ -1,8 +1,8 @@
 # Design Document - Demand Forecasting System
 
-**Project:** Demand Forecasting using Economic Indicators  
-**Created:** 2025-11-08  
-**Status:** Phase 1 Complete, Phase 2 Design  
+**Project:** Demand Forecasting using Economic Indicators
+**Created:** 2025-11-08
+**Status:** Phase 1 Complete, Phase 2 Design
 **Version:** 1.0
 
 ---
@@ -17,7 +17,7 @@ This document outlines the technical design for a demand forecasting system that
 
 ### High-Level Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                     DEMAND FORECASTING SYSTEM                    │
 └─────────────────────────────────────────────────────────────────┘
@@ -413,7 +413,7 @@ def engineer_features(
 
 | Component | Technology | Version | Rationale |
 |-----------|------------|---------|-----------|
-| Programming Language | Python | 3.8+ | Industry standard for data science |
+| Programming Language | Python | 3.14 | Industry standard for data science |
 | Data Manipulation | pandas | 2.0+ | Efficient time series operations |
 | Numerical Computing | NumPy | 1.24+ | Fast array operations |
 | Visualization | matplotlib, seaborn | 3.7+, 0.12+ | Rich plotting capabilities |
