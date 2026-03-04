@@ -164,5 +164,36 @@ After running preprocessing (with default `outdir`), the following are created:
 
 ```
 
+---
 
-[1]: https://github.com/AntoniouIoannis/demand-python-314/blob/main/README.md "demand-python-314/README.md at main · AntoniouIoannis/demand-python-314 · GitHub"
+## 👥 Team
+
+### 🧑‍💻 GIORGOS KIMINOS— Original Author & Owner
+Giorgos designed and implemented the original sales preprocessing pipeline.  
+He is the exclusive owner of the core data processing logic and the foundational project architecture.
+
+**Responsibilities:**
+- Initial pipeline design
+- Data preprocessing logic
+- Aggregation & rolling statistics implementation
+- Core project structure
+
+---
+
+### 🧑‍💻 IOANNIS ANTONIOU — Platform & Deployment Engineering
+Ioannis upgraded the project environment to Python 3.14, wrapped the pipeline into a Flask API,
+and containerized the application for modern cloud deployment.
+
+**Responsibilities:**
+- Migration to Python 3.14
+- Flask API integration
+- Docker containerization
+- Google Cloud Run readiness
+- Deployment workflow configuration
+
+---
+
+## 📌 Project Ownership
+
+The original data processing logic and core implementation remain under the ownership of Giorgos.  
+Infrastructure modernization, API exposure, and cloud deployment engineering were implemented by Ioannis.
