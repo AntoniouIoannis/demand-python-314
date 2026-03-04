@@ -55,6 +55,33 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:8080/run-all" -ContentType
 } | ConvertTo-Json)
 ```
 
+## Docker (Cloud Run-ready)
+Build image:
+```bash
+docker build -t demand-python-314:latest .
+```
+
+Run locally in container:
+```bash
+docker run --rm -p 8080:8080 demand-python-314:latest
+```
+
+## Deploy to Google Cloud Run
+Prerequisites: Google Cloud SDK installed, project selected, and billing enabled.
+
+```bash
+gcloud auth login
+gcloud config set project YOUR_GCP_PROJECT_ID
+gcloud services enable run.googleapis.com artifactregistry.googleapis.com cloudbuild.googleapis.com
+gcloud builds submit --tag gcr.io/YOUR_GCP_PROJECT_ID/demand-python-314
+gcloud run deploy demand-python-314 --image gcr.io/YOUR_GCP_PROJECT_ID/demand-python-314 --platform managed --region europe-west1 --allow-unauthenticated --port 8080
+```
+
+After deploy, test:
+```bash
+curl https://YOUR_CLOUD_RUN_URL/health
+```
+
 ## Outputs (written to `--outdir`, default `/mnt/data`)
 - `sales_transactions_2017_2019.csv.gz`
 - `item_month_agg_2017_2019.csv`
